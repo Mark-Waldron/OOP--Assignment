@@ -76,8 +76,37 @@ void drawChart(float barchart_value[], String elements[])
 
  float b = 0;
  int times = 0;
+ 
+ int space = 10;
+ 
 
 void drawgraph( float arr[])
+{
+  float border_y = 450;
+  
+  float barWidth = 400 / (float) arr.length + space;
+
+
+  for( int i = 0; i <  arr.length; i++)
+  {
+
+    noStroke();
+    fill(38, 153, 0);
+    float x = i * barWidth;
+    rect(x , border_y - arr[i], barWidth - 32.5, arr[i]);
+    fill(0);
+    
+  }
+  
+   
+    for( int j = 1; j < arr.length; j++)
+    {
+      arr[j] = random(0,400);
+    }
+    
+}
+
+void drawgraph_final( float arr[])
 {
   float border_y = 450;
   float border_x = 50;
@@ -97,17 +126,7 @@ void drawgraph( float arr[])
     }
     
     
-    do
-    {
-      b = b + 0.25;   
-    }while(times > 5);
     
-    times++;
-    
-    for( int i = 1; i < arr.length; i++)
-    {
-      arr[i] = random(0,500);
-    }
     
 }
 
@@ -132,7 +151,7 @@ void draw()
   }
   else
   {
-    drawgraph(barchart_value);
+    drawgraph_final(barchart_value);
   
   }
   
