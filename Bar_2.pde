@@ -1,7 +1,11 @@
-
+void setup()
+{
+  size(500, 500);
+ 
+}
  
 float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
-String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "He", "Cl"};
+String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "P", "B", "He", "Cl", "As"};
 
 int time = 0;
 
@@ -12,7 +16,7 @@ void drawChart(float barchart_value[], String elements[])
   stroke(0, 255, 255);
   float border = width * 0.1f;
   
-  float windowRange = (width - (border * 2.0f));
+  float windowRange = (width - (border * 4.17f));
    
   stroke(200, 200, 200);
   fill(200, 200, 200);  
@@ -25,7 +29,7 @@ void drawChart(float barchart_value[], String elements[])
   float tickSize = border * 0.1f;
 
     
-  for (int j = 0 ; j < 7; j ++)
+  for (int j = 0 ; j < 9; j ++)
   {   
    // Draw the ticks
    float x = border + (j * horizInterval);
@@ -39,7 +43,7 @@ void drawChart(float barchart_value[], String elements[])
    text(elements[j].substring(0, 1), x, textY);
   }
   
-  for (int m = 7 ; m < 9; m ++)
+  for (int m = 9 ; m < 12; m ++)
   {   
    // Draw the ticks
    float x = border + (m * horizInterval);
@@ -72,15 +76,12 @@ void drawChart(float barchart_value[], String elements[])
 
  float b = 0;
  int times = 0;
- 
- int space = 10;
- 
 
 void drawgraph( float arr[])
 {
   float border_y = 450;
   
-  float barWidth = 400 / (float) arr.length + space;
+  float barWidth = 400 / (float) arr.length;
 
 
   for( int i = 0; i <  arr.length; i++)
@@ -89,7 +90,59 @@ void drawgraph( float arr[])
     noStroke();
     fill(38, 153, 0);
     float x = i * barWidth;
-    rect(x , border_y - arr[i], barWidth - 32.5, arr[i]);
+    rect(x + 35, border_y - arr[i], barWidth - 32.5, arr[i]);
+    fill(0);
+    
+  }
+  
+   
+    for( int j = 1; j < arr.length; j++)
+    {
+      arr[j] = random(0,400);
+    }
+    
+}
+
+void drawgraph_2( float arr[])
+{
+  float border_y = 450;
+  
+  float barWidth = 400 / (float) arr.length;
+
+
+  for( int i = 0; i <  arr.length; i++)
+  {
+
+    noStroke();
+    fill(38, 153, 0);
+    float x = i * barWidth;
+    rect(x + 65, border_y - arr[i], barWidth - 32.5, arr[i]);
+    fill(0);
+    
+  }
+  
+   
+    for( int j = 1; j < arr.length; j++)
+    {
+      arr[j] = random(0,400);
+    }
+    
+}
+
+void drawgraph_3( float arr[])
+{
+  float border_y = 450;
+  
+  float barWidth = 400 / (float) arr.length;
+
+
+  for( int i = 0; i <  arr.length; i++)
+  {
+
+    noStroke();
+    fill(38, 153, 0);
+    float x = i * barWidth;
+    rect(x + 85 , border_y - arr[i], barWidth - 32.5, arr[i]);
     fill(0);
     
   }
@@ -105,7 +158,6 @@ void drawgraph( float arr[])
 void drawgraph_final( float arr[])
 {
   float border_y = 450;
-  float border_x = 50;
   
   float barWidth = 400 / (float) arr.length;
 
@@ -115,18 +167,14 @@ void drawgraph_final( float arr[])
 
     noStroke();
     fill(38, 153, 0);
-    float x = (i + b) * barWidth;
-    rect(x + border_x, border_y - arr[i], barWidth - 32.5, arr[i]);
+    float x = i * barWidth;
+    rect(x + 35, border_y - arr[i], barWidth - 32.5, arr[i]);
     fill(0);
+    
+  }
+  
    
-    }
-    
-    
-    
-    
-<<<<<<< HEAD
-}
-=======
+  
 }
 
 
@@ -146,6 +194,8 @@ void draw()
     else
     {
       drawgraph(barchart_value);
+      drawgraph_2(barchart_value);
+      drawgraph_3(barchart_value);
     } 
   }
   else
@@ -159,4 +209,3 @@ void draw()
 }
      
       
->>>>>>> 5824b9b3e7519f6de3b53bcfccfd6cb394a9ef5d
