@@ -1,4 +1,4 @@
-
+/*
 
 
 
@@ -73,8 +73,12 @@ int Box_move_y = 250;
   fill(51, 102, 255);
   line(250, 50, 250, 175);
   ellipse(250, 175, 7, 7);
-  
-  
+  import processing.sound.*;
+SoundFile file;
+
+
+  fullScreen();
+  file = new SoundFile(this, "close.mp3");
   
   //expanding arc
   noFill();
@@ -97,3 +101,4 @@ int Box_move_y = 250;
   
   
 }
+*/
