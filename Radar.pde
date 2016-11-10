@@ -1,12 +1,5 @@
-import processing.sound.*;
-SoundFile file;
 
 
-void setup()
-{
-  size(500,500);
-  file = new SoundFile(this, "close.mp3");
-}
 
 
 int expand = 0; 
@@ -24,8 +17,7 @@ int Box_move_x = 175;
 int Box_move_y = 250;
 
 
-void draw()
-{
+
   
   if(expand == 400)
   {

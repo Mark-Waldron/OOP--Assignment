@@ -1,8 +1,4 @@
-void setup()
-{
-  size(500, 500);
- 
-}
+
  
 float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
 String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "He", "Cl"};
@@ -110,34 +106,3 @@ void drawgraph( float arr[])
     }
     
 }
-
-
-void draw()
-{
-  
-  drawChart(barchart_value, elements);
-  
-  
-  if(time < 60)
-  {
-    
-    if(time % 2 == 0 )
-    {
-      background(0); 
-    }
-    else
-    {
-      drawgraph(barchart_value);
-    } 
-  }
-  else
-  {
-    drawgraph(barchart_value);
-  
-  }
-  
-  time++;
-  
-}
-     
-      

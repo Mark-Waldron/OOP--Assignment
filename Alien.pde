@@ -1,15 +1,12 @@
-void setup()
-{
-  size(500,500);
-}
+
 
 int Moveblack = 0;
 float decreasing_size = 1;
-int time = 0;
 
 
 
-void draw()
+
+void drawlogo()
 {
  
   
