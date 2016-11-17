@@ -1,6 +1,12 @@
+
+
+
 class Barchart
 {
   
+
+  float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
+  String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "P", "B", "He", "Cl", "As"};
    
   
    
@@ -153,10 +159,10 @@ class Barchart
       
   }
   
-  void drawgraph_final( float arr[])
+  void drawgraph_final_1( float arr[])
   {
-    scale(1.4);
-    float border_y = 807;
+   scale(1.4);
+   float border_y = 807;
     
     float barWidth = 400 / (float) arr.length;
   
@@ -171,11 +177,80 @@ class Barchart
       fill(0);
       
     }
+  }
+   
+     void drawgraph_final_2( float arr[])
+  {
     
-     
+   float border_y = 807;
     
+    float barWidth = 400 / (float) arr.length;
+  
+  
+    for( int i = 0; i <  arr.length; i++)
+    {
+  
+      noStroke();
+      fill(38, 153, 0);
+      float x = i * barWidth;
+      rect(x + 65, border_y - arr[i], barWidth - 32.5, arr[i]);
+      fill(0);
+      
+    }
   }
   
+   void drawgraph_final_3( float arr[])
+  {
+    
+   float border_y = 807;
+    
+    float barWidth = 400 / (float) arr.length;
   
   
+    for( int i = 0; i <  arr.length; i++)
+    {
+  
+      noStroke();
+      fill(38, 153, 0);
+      float x = i * barWidth;
+      rect(x + 85, border_y - arr[i], barWidth - 32.5, arr[i]);
+      fill(0);
+      
+    }
+  }
+    
+    void barchart()
+    {
+      if(time2 > 900 && time2 < 1100)
+      {
+        drawChart(barchart_value, elements);
+        if(time2 < 1100)
+        {
+        
+          if(time2 % 2 == 0 )
+          {
+             
+           
+          }
+          else
+          {
+            drawgraph(barchart_value);
+            drawgraph_2(barchart_value);
+            drawgraph_3(barchart_value);
+          } 
+        }
+      }
+        
+        if(time2 > 1100)
+        {
+           
+         drawChart(barchart_value, elements);
+         drawgraph_final_1(barchart_value);
+         drawgraph_final_2(barchart_value); 
+         drawgraph_final_3(barchart_value);
+        }
+      
+      
+  
+    }
 }

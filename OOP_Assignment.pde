@@ -1,50 +1,57 @@
+import processing.sound.*;
+SoundFile file;
+
 void setup()
 {
+  file = new SoundFile(this, "close.mp3");
   fullScreen();  
+  
+ 
 }
 
   Logo Wayland = new Logo();
   Barchart bar = new Barchart();
-  float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
-  String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "P", "B", "He", "Cl", "As"};
+  Radar Alien_Radar = new Radar();
+ 
+
+void scale_radar()
+{
+   Alien_Radar.drawradar();
+  
+}
+
+
+
+void scale_barchart()
+{
+   scale(1.6);
+   textSize(14);
+   
+   bar.barchart();
+}
 
 
 int time = 0;
+int time2 = 0;
 
 void draw()
 {
+    background(0);
 
-     Wayland.drawlogo();
+  
+  
+  Wayland.drawlogo();
+  
+  scale_barchart();
+  
+  scale_radar();
+  
+
    
    
    
+ 
   
-    
-    if(time >  870)
-    {
-      
-      bar.drawChart(barchart_value, elements);
-      if(time < 920)
-      {
-        
-        if(time % 2 == 0 )
-        {
-           
-        }
-        else
-        {
-          bar.drawgraph(barchart_value);
-          bar.drawgraph_2(barchart_value);
-          bar.drawgraph_3(barchart_value);
-        } 
-      }
-      else
-      {
-        bar.drawgraph_final(barchart_value);
-      
-      }
-    }   
-  
-  
+  time2++;
   time++;
 }

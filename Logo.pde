@@ -2,16 +2,18 @@
 class Logo 
 {
   
+ int size_of_tile = 1000;
  int Moveblack = 0;
  float decreasing_size = 1;
+ int move_text_1 = 100;
+ int move_text_2 = 200; 
+ 
+ 
   void drawlogo()
   {
     scale(2.8);
    
-    
-   
-    
-    background(0);
+     background(0);
     
     fill(255);
     scale(decreasing_size);
@@ -166,11 +168,21 @@ class Logo
     time++;
     fill(255);
     textSize(38);
-    text("WEYLAND CORP",100,200);
+    text("WEYLAND CORP", move_text_1, move_text_2 );
+    
+     if(time2 > 900)
+     {
+       move_text_1 = 395;
+       move_text_2 = 185;
+     }
      
     fill(0);
     Moveblack = Moveblack + 1;
-    rect(0 , Moveblack , 500, 500);
-    
+    if(Moveblack > 300)
+    {
+      
+      size_of_tile = 0; 
+    }
+     rect(0 , Moveblack , size_of_tile, size_of_tile);
   }
 }
