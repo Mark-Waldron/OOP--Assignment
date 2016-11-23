@@ -1,9 +1,16 @@
-
-
 class Radar 
 {
-
-  int expand = 0; 
+ 
+  float range_away = 200;
+  float blip = 390;
+  float move = 0;
+  float range = 0; 
+  
+  float Sound_played = 0;
+  
+  float radar_top = 55;
+  
+  float expand = 0; 
   
   int x = 0;
   int y = 0;
@@ -16,11 +23,11 @@ class Radar
   
   int Box_move_x = 175;
   int Box_move_y = 250;
-  
+
   
   void drawradar()
   {  
- 
+    background(0);
     fill(0);
     stroke(51, 102, 255);
     //fixed double arc
@@ -60,7 +67,47 @@ class Radar
     line(250, 50, 250, 175);
     ellipse(250, 175, 7, 7);
     
-  
+    
+    if(expand == 400)
+    {   
+     
+        expand = 0;
+      
+      if(Sound_played < 200)
+      {
+         file.play();
+      }
+      else if(Sound_played > 200 &&  Sound_played < 600)
+      {
+         file_2.play();
+      }
+      else if(Sound_played > 600)
+      {
+         file_3.play();
+      }
+    
+    }
+    
+    
+    
+    
+    
+    if(expand == blip)
+    {
+      if(Sound_played < 600)
+      {
+        noStroke();
+        ellipse(random(250 - range,250 + range),radar_top + move,10,10);
+        fill(128, 179, 255);
+      }
+      else
+      {
+        noStroke();
+        ellipse(random(250 ,250),radar_top + move,10,10);
+        fill(128, 179, 255);
+      }
+    }
+    
     //expanding arc
     noFill();
     arc(250, 250, expand, expand, -PI, 0);  // upper half of circle
@@ -78,14 +125,26 @@ class Radar
     vertex(x4 + Box_move_x, y4 + Box_move_y);
     // etc;  
     endShape();
+   
+    move = move + 0.1; 
+  
+    Sound_played = Sound_played + 0.5;
     
-    
-    if(expand == 400)
+    if(Sound_played > 300)
     {
-      file.play();
-      expand = 0;
+       range = range - 0.12;
     }
-  }
+    else
+    {
+      range = range + 0.12;
+    }
+    
+    textSize(38);
+    fill(255, 0, 0);
+    text(range_away, 185,280); 
+    
+    range_away =  range_away - 0.1;
 
+  }
 }
   

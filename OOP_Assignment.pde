@@ -1,9 +1,13 @@
 import processing.sound.*;
 SoundFile file;
+SoundFile file_2;
+SoundFile file_3;
 
 void setup()
 {
   file = new SoundFile(this, "close.mp3");
+  file_2 = new SoundFile(this, "Closer.mp3");
+  file_3 = new SoundFile(this, "closest.mp3");
   fullScreen();  
   
  
@@ -11,12 +15,12 @@ void setup()
 
   Logo Wayland = new Logo();
   Barchart bar = new Barchart();
-  Radar Alien_Radar = new Radar();
+  //Radar Alien_Radar = new Radar();
  
 
 void scale_radar()
 {
-   Alien_Radar.drawradar();
+   //Alien_Radar.drawradar();
   
 }
 
@@ -38,6 +42,7 @@ void draw()
 {
     background(0);
 
+  
   
   
   Wayland.drawlogo();
