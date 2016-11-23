@@ -1,6 +1,5 @@
-class Radar 
-{
- 
+/*class Radar 
+{ 
   float range_away = 200;
   float blip = 390;
   float move = 0;
@@ -27,6 +26,8 @@ class Radar
   
   void drawradar()
   {  
+    
+    
     background(0);
     fill(0);
     stroke(51, 102, 255);
@@ -77,7 +78,7 @@ class Radar
       {
          file.play();
       }
-      else if(Sound_played > 200 &&  Sound_played < 600)
+      else if(Sound_played > 201 &&  Sound_played < 600)
       {
          file_2.play();
       }
@@ -145,6 +146,6 @@ class Radar
     
     range_away =  range_away - 0.1;
 
+    }
   }
-}
-  
+*/

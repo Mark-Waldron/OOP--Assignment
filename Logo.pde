@@ -184,5 +184,5 @@ class Logo
       size_of_tile = 0; 
     }
      rect(0 , Moveblack , size_of_tile, size_of_tile);
-  }
-}
+   }
+ }
