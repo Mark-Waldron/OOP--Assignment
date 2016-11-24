@@ -1,4 +1,4 @@
-/*class Radar 
+class Radar 
 { 
   float range_away = 200;
   float blip = 390;
@@ -145,7 +145,5 @@
     text(range_away, 185,280); 
     
     range_away =  range_away - 0.1;
-
     }
   }
-*/
