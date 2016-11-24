@@ -8,12 +8,14 @@ void setup()
 {
   
   fullScreen();  
-  //file = new SoundFile(this, "close.mp3");
-  //file_2 = new SoundFile(this, "Closer.mp3");
-  //file_3 = new SoundFile(this, "closest.mp3"); 
+  
  
 }
 
+  //file = new SoundFile(this, "close.mp3");
+  //file_2 = new SoundFile(this, "Closer.mp3");
+  //file_3 = new SoundFile(this, "closest.mp3"); 
+  
   HUD Viser = new HUD();
   Logo Wayland = new Logo();
   Barchart bar = new Barchart();
@@ -38,7 +40,7 @@ void scale_barchart()
 {
    
    textSize(14);
-   
+    
    bar.barchart();
 }
 
