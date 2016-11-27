@@ -43,7 +43,6 @@ int time2 = 0;
 
 void draw()
 {
-  
     
   
    if(time > 950)
@@ -61,14 +60,10 @@ void draw()
    }
    
 
+   if(time < 1200)
+   {
+     time++;
+   }
   
   
- 
-  
-  
- 
-  
-
-  time2++;
-  time++;
 }

@@ -224,7 +224,7 @@ class Barchart
       if(time > 900 && time < 1100)
       {
         drawChart(barchart_value, elements);
-        if(time2 < 1100)
+        if(time < 1100)
         {
         
           if(time % 2 == 0 )

@@ -102,7 +102,6 @@ class Logo
     }
     time++;
     
-    
     beginShape();
     vertex(x1 + move,y1 + move);
     vertex(x2 + move,y2 + move);
