@@ -10,9 +10,12 @@ class Logo
  
   void drawlogo()
   {
-    scale(2.8);
    
-     background(0);
+   if(time < 900)
+   {
+     background(0); 
+   }
+    scale(2.8);
     
     fill(255);
     scale(decreasing_size);
@@ -90,6 +93,16 @@ class Logo
     int move_tri_x3 = 145 + 20;
     int move_tri_y3 = 25;
     
+    
+    if(time > 700 && time < 860)
+    {
+      
+      decreasing_size = decreasing_size - 0.01;
+      background(0);
+    }
+    time++;
+    
+    
     beginShape();
     vertex(x1 + move,y1 + move);
     vertex(x2 + move,y2 + move);
@@ -159,29 +172,18 @@ class Logo
     // etc;  
     endShape();
    
-    
-    if(time > 700 && time < 860)
-    {
-      decreasing_size = decreasing_size - 0.01;
-    }
-    time++;
+   
     fill(255);
     textSize(38);
     text("WEYLAND CORP", move_text_1, move_text_2 );
-    
-     if(time2 > 900)
-     {
-       move_text_1 = 395;
-       move_text_2 = 185;
-     }
      
     fill(0);
     Moveblack = Moveblack + 1;
     if(Moveblack > 300)
     {
-      
       size_of_tile = 0; 
     }
      rect(0 , Moveblack , size_of_tile, size_of_tile);
    }
+   
  }

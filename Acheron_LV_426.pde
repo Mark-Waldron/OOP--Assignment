@@ -3,7 +3,7 @@ class Acheron_LV_426
 
   void Background_Acheron_LV_426()
   {
-    
+    scale(1);
     PImage img;
     img = loadImage("movie.jpeg");
     imageMode(CORNERS);

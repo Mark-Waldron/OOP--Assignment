@@ -17,51 +17,29 @@ void setup()
   
   
   HUD Viser = new HUD();
-  //Logo Wayland = new Logo();
+  Logo Wayland = new Logo();
   //Barchart bar = new Barchart();
   //Radar Alien_Radar = new Radar();
   Acheron_LV_426 window = new Acheron_LV_426();
  
-
-/* 
-
-void scale_drawHUD()
-{
-   scale(1.6);
-   textSize(14);
-   
-    //Viser.drawHUD();
-}
-
-
-void scale_barchart()
-{
-   
-   textSize(14);
-    
-   //bar.barchart();
-}
-
-//void scale_radar()
-{
-   //Alien_Radar.drawradar();
-} 
-*/
 int time = 0;
 int time2 = 0;
 
 void draw()
 {
   
+    
+  
+   if(time > 950)
+   {
+     window.Background_Acheron_LV_426();
+     Viser.drawHUD();
+   }
 
- window.Background_Acheron_LV_426();
-  
-  //scale_radar();
-  //Wayland.drawlogo();
-  
-  Viser.drawHUD();
-   
-  //scale_barchart();
+   Wayland.drawlogo();
+
+ //scale_radar();
+ //scale_barchart();
   
   
  
