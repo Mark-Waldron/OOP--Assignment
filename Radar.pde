@@ -1,4 +1,4 @@
-/*
+
 class Radar 
 { 
   float range_away = 200;
@@ -148,4 +148,3 @@ class Radar
     range_away =  range_away - 0.1;
     }
   }
-*/

@@ -221,13 +221,13 @@ class Barchart
     
     void barchart()
     {
-      if(time2 > 900 && time2 < 1100)
+      if(time > 900 && time < 1100)
       {
         drawChart(barchart_value, elements);
         if(time2 < 1100)
         {
         
-          if(time2 % 2 == 0 )
+          if(time % 2 == 0 )
           {
              
            
@@ -241,7 +241,7 @@ class Barchart
         }
       }
         
-        if(time2 > 1100)
+        if(time > 1100)
         {
            
          drawChart(barchart_value, elements);
