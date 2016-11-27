@@ -27,13 +27,15 @@ void setup()
     scale(1.6);
     textSize(14);
     
-    translate(0, 50);
+    translate(50, 50);
     bar.barchart();
  }
  
- void scale_radar();
+ void scale_radar()
  {
-   Alien_radar.
+   translate(1000, 334);
+   scale(1.35);
+   Alien_Radar.drawradar();
  }
   
 int time = 0;
@@ -51,8 +53,13 @@ void draw()
    }
    
    Wayland.drawlogo();
-   scale_barchart();
-   scale_radar();
+   
+   if(time > 950)
+   {
+     scale_barchart();
+     scale_radar(); 
+   }
+   
 
   
   

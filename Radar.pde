@@ -28,8 +28,7 @@ class Radar
   void drawradar()
   {  
     
-    
-    background(0);
+        
     fill(0);
     stroke(51, 102, 255);
     //fixed double arc
