@@ -3,7 +3,7 @@
 
 class Barchart
 {
-  
+  float load = 0;  
 
   float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
   String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "P", "B", "He", "Cl", "As"};
@@ -221,10 +221,11 @@ class Barchart
     
     void barchart()
     {
-      if(time > 900 && time < 1100)
+      if(time > 900 && time < 1200)
       {
+          
         drawChart(barchart_value, elements);
-        if(time < 1100)
+        if(time < 1200)
         {
         
           if(time % 2 == 0 )
@@ -238,19 +239,38 @@ class Barchart
             drawgraph_2(barchart_value);
             drawgraph_3(barchart_value);
           } 
+          
+        
+        fill(38, 153, 0);
+        rect(60,860,load,30);
+        
         }
+        
+        
+      
       }
         
-        if(time > 1100)
+        if(time > 1200)
         {
            
          drawChart(barchart_value, elements);
          drawgraph_final_1(barchart_value);
          drawgraph_final_2(barchart_value); 
          drawgraph_final_3(barchart_value);
+        
+        fill(38, 153, 0);
+        rect(60,860,load,30);
+        
         }
-      
-      
+        
+      if(time < 1200)
+      {  
+        load = load + 3.12; 
+      }  
+           
+            
+     }
+     
+ 
   
-    }
 }

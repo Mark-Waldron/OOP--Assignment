@@ -6,10 +6,10 @@ PImage img;
 
 void setup()
 {
-   
+  fullScreen(); 
   img = loadImage("movie_converted.jpg");
   
-  fullScreen();  
+    
   file = new SoundFile(this, "close.mp3");
   file_2 = new SoundFile(this, "Closer.mp3");
   file_3 = new SoundFile(this, "closest.mp3"); 
@@ -22,7 +22,6 @@ void setup()
   Logo Wayland = new Logo();
   Barchart bar = new Barchart();
   Radar Alien_Radar = new Radar();
-  Acheron_LV_426 window = new Acheron_LV_426();
   
   void scale_barchart()
  {
