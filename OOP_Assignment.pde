@@ -2,10 +2,12 @@ import processing.sound.*;
 SoundFile file;
 SoundFile file_2;
 SoundFile file_3;
-
+PImage img;
 
 void setup()
 {
+   
+  img = loadImage("movie_converted.jpg");
   
   fullScreen();  
   file = new SoundFile(this, "close.mp3");
@@ -24,6 +26,8 @@ void setup()
   
   void scale_barchart()
  {
+   
+   
     scale(1.6);
     textSize(14);
     
@@ -43,11 +47,12 @@ int time2 = 0;
 
 void draw()
 {
-    
+  
+   
   
    if(time > 950)
    {
-     window.Background_Acheron_LV_426();
+     background(img);
      Viser.drawHUD();
    }
    
