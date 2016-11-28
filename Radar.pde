@@ -139,11 +139,12 @@ class Radar
     {
       range = range + 0.12;
     }
-    
     textSize(38);
     fill(255, 0, 0);
-    text(range_away, 185,280); 
-    
-    range_away =  range_away - 0.1;
+    text(range_away, 350,280); 
+    if( range_away > 0)
+    {
+      range_away =  range_away - 0.1;
+    }
     }
   }

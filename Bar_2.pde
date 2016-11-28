@@ -3,13 +3,13 @@
 
 class Barchart
 {
+ 
   float load = 0;  
 
   float[] barchart_value = {0 ,random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500), random(0,500)};
   String[] elements = {" " ,"O", "N", "H", "C", "S", "F", "P", "B", "He", "Cl", "As"};
    
   
-   
 
   void drawChart(float barchart_value[], String elements[])
   {
@@ -221,7 +221,8 @@ class Barchart
     
     void barchart()
     {
-      if(time > 900 && time < 1200)
+     
+    if(time > 900 && time < 1200)
       {
           
         drawChart(barchart_value, elements);
@@ -243,6 +244,9 @@ class Barchart
         
         fill(38, 153, 0);
         rect(60,860,load,30);
+        fill(255);
+        textSize(25);
+        text("Calculating Atmosphere",400,870);
         
         }
         
@@ -260,6 +264,9 @@ class Barchart
         
         fill(38, 153, 0);
         rect(60,860,load,30);
+        fill(255);
+        textSize(25);
+        text("Atmosphere Calculated",400,870);
         
         }
         
@@ -268,9 +275,6 @@ class Barchart
         load = load + 3.12; 
       }  
            
-            
-     }
-     
- 
-  
+    }
+      
 }

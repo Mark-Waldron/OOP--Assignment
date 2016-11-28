@@ -65,9 +65,8 @@ class HUD
   // etc;
   endShape();
  
-  
+  fill(255);
   beginShape();
-  
   vertex(11 * lenght_grid, 18 * width_grid);
   vertex(16 * lenght_grid, 12  * width_grid);
   vertex(21 * lenght_grid, 18 * width_grid);
