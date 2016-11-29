@@ -16,9 +16,6 @@ void setup()
   file = new SoundFile(this, "close.mp3");
   file_2 = new SoundFile(this, "Closer.mp3");
   file_3 = new SoundFile(this, "closest.mp3"); 
-  
- 
-  
 }
 
   
@@ -27,7 +24,8 @@ void setup()
   Logo Wayland = new Logo();
   Barchart bar = new Barchart();
   Radar Alien_Radar = new Radar();
-  Buttons switches = new Buttons(); 
+  Buttons switches = new Buttons();
+  Map map = new Map();
   
   
     float points = 5;
@@ -152,11 +150,27 @@ void draw()
        
        scale_barchart();
        
+       
+       
+       
+       
+       
+       
        scale_radar();
+       
+       if (mousePressed)
+     {
+        if (mouseX > 3 * points + move_over_2 -25 && mouseX < 2 * points + move_over_2  + 20 && mouseY > 5 * points + move_down -25 && mouseY <15  * points + move_down +20)
+        {
+       stroke(0, 0, 204);
+       noFill();
+       map.draw_map();
+        }
+     }
      }
    
    
-  
+   
 
    if(time < 1200)
    {

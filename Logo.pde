@@ -175,7 +175,7 @@ class Logo
     fill(255);
     textSize(38);
     text("WEYLAND CORP", move_text_1, move_text_2 );
-    if(time > 900)
+    if(time > 950)
     {
       move_text_1 = 395;
       move_text_2 = 180;
