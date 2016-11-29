@@ -63,7 +63,7 @@ void setup()
  
  void scale_radar()
  {
-   translate(1000, 334);
+   translate(1025, 334);
    scale(1.35);
    Alien_Radar.drawradar();
  }
