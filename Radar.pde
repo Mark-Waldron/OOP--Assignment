@@ -23,7 +23,9 @@ class Radar
   
   int Box_move_x = 175;
   int Box_move_y = 250;
-
+  int Box_move_x_2 = -455;
+  int Box_move_y_2 = -300;
+ 
   
   void drawradar()
   {  
@@ -126,6 +128,8 @@ class Radar
     vertex(x4 + Box_move_x, y4 + Box_move_y);
     // etc;  
     endShape();
+    
+    
    
     move = move + 0.1; 
   
@@ -147,5 +151,19 @@ class Radar
       range_away =  range_away - 0.1;
       expand = expand + 10;
     }
+    
+    pushMatrix();
+    fill(51, 102, 255);
+    rotate(PI);
+    beginShape();
+    vertex(x + 20 + Box_move_x_2, y + Box_move_y_2);
+    vertex(x2 + Box_move_x_2, y2  + Box_move_y_2);
+    vertex(x3  + Box_move_x_2, y3 + Box_move_y_2);
+    vertex(x4  + Box_move_x_2, y4  + Box_move_y_2);
+    // etc;  
+    endShape();
+    popMatrix();
+    
+    
     }
   }
