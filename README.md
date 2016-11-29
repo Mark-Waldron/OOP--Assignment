@@ -7,5 +7,22 @@ I Started out by making the Wayland Corperation logo as they are the nearly the 
 
 The next implamation I went on to make was the icon motion tracker for the squal aliens. I enjoyed making this the most as I used very basic principles but in excution it looked extreamly simlar to the movie. I also incorperated sound into the radar so that the iconic beep would intenisify as the opject got closer to the center. One thing I would have loved to implament was a trail on the arc outwards but I still think the effect is still pritty sweet. I had alot of fun working with this part. I was thinking of implamenting a jumpscare when the distance got to 0 but I thought it would be a bit of a gimic and would not the fit the GUI sense, however I will leave a not here to implament into a futhure versioin. 
 
-The next Implamention I introduced was the the climate calculator, which would tell the wearer the qontitity of certain elements. This I feel was a nessary implamentation because the expanditionary team could know if its safe to breath or can the planate sustain other forms of life.  
+The next Implamention I introduced was the the climate calculator, which would tell the wearer the qontitity of certain elements. This I feel was a nessary implamentation because the expanditionary team could know if its safe to breath or can the planate sustain other forms of life. I felt like the excution could have been a bit better but I still think it serves its purpose. This was probuble the hardest part of my assignment as there was so many gliches and bugs that I had to tediously fix, but I do still like how it turned out.
+
+The next Implamentation was the HUD. I made the HUD by using a combination of multiple PShapes. This was tedious but because I broke it up into so many shapes I could make it look cool. Not the most artsy person I person really like the verious shades of dark blue to complament the light blue of the radar and map. This is another part of my assignment which I really am proud of. I then fitted the HUD round all the implamentations and then but the background in from the iconic shot of the crashed spaceship from the first alien.
+
+The final implamentaion was the buttons, These 3 buttons do very usefull actives. The first button to the Left is night vision and also can be used as xenomorph vision as seen in the Alien vrs Preditior movies(which I also kind of want to forget). The middle button is a scanner which scans what ever the user is looking at. The third is a Map with the user current opjective location.
+
+I hope you enjoy my Project, here are a list of things that I am proude of what I achived 
+-> The moving Logo startup 
+-> The Motion Tracker radar
+-> The hud
+
+
+
+
+
+
+
+
 
