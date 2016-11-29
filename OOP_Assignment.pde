@@ -33,7 +33,11 @@ void setup()
     float points = 5;
     float move_down = 10;
     float move_over = 1140;
+    float move_over_1 = 1220;
+    float move_over_2 = 1300;
     int start = 0;
+    int Scan_up_down = 0;
+    int Scan_across = 0;
     
     
   
@@ -86,6 +90,51 @@ void draw()
           background(img_2); 
          }
      }
+     
+    
+    if (mousePressed)
+     {
+        if (mouseX > 3 * points + move_over_1 -25 && mouseX < 2 * points + move_over_1  + 20 && mouseY > 5 * points + move_down -25 && mouseY <15  * points + move_down +20)
+        {
+    
+    stroke(38, 153, 0);
+    strokeWeight(10);
+    line(0, Scan_up_down, width, Scan_up_down);
+    
+    for(int i = 0;i < 5; i++)
+    {
+      if(Scan_up_down < height)
+      {
+        Scan_up_down = Scan_up_down + 30;
+      }  
+    
+      if (Scan_up_down > height)
+      {
+        Scan_up_down = 0; 
+      }
+    }
+    
+    line(Scan_across,height, Scan_across,0 );
+    
+    for(int j = 0;j < 5; j++)
+    {
+      if(Scan_across < width)
+      {
+         Scan_across = Scan_across + 20;
+      }  
+    
+      if (Scan_across > width)
+      {
+        Scan_across = 0; 
+      }
+    }
+     
+        }
+     }
+     
+     stroke(0);
+     strokeWeight(1);
+     
      Viser.drawHUD();
      button_duplication();
    }

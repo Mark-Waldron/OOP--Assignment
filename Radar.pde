@@ -112,7 +112,7 @@ class Radar
     //expanding arc
     noFill();
     arc(250, 250, expand, expand, -PI, 0);  // upper half of circle
-    expand = expand + 10;
+    
     
     fill(51, 102, 255);
     rect(50,250,400,100);
@@ -145,6 +145,7 @@ class Radar
     if( range_away > 0)
     {
       range_away =  range_away - 0.1;
+      expand = expand + 10;
     }
     }
   }
